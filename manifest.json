@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Market Copy Storage Extension",
+  "version": "0.0.1",
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Copy Storage"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["content.js"]
+  }],
+  "icons": {
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "tabs"
+  ]
+}
